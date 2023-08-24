@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News app</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="main-nav container flex">
+        <a href="#" class="logo" onclick="reload()">
+          <img src="img/Untitled design.png" alt="logo" />
+        </a>
+        <div class="nav-link container">
+          <ul class="flex">
+            <li
+              class="hover-link nav-item"
+              id="sports"
+              onclick="onNavClick('sports')"
+            >
+              Sports
+            </li>
+            <li
+              class="hover-link nav-item"
+              id="world"
+              onclick="onNavClick('World')"
+            >
+              World
+            </li>
+            <li
+              class="hover-link nav-item"
+              id="finance"
+              onclick="onNavClick('World')"
+            >
+              Finance
+            </li>
+            <li
+              class="hover-link nav-item"
+              id="entertainment"
+              onclick="onNavClick('entertainment')"
+            >
+              Entertainment
+            </li>
+          </ul>
+        </div>
+        <div class="search-bar flex">
+          <input
+            type="text"
+            class="news-input"
+            placeholder="e.g Science"
+            id="search-text"
+          />
+          <button class="search-btn" id="search-btn">Search</button>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="cards-container container flex" id="cards-container"></div>
+    </main>
+    <template id="news-card-template">
+      <div class="card">
+        <div class="card-header">
+          <img src="https://via.placeholder.com/400x200" alt="" id="news-img" />
+        </div>
+        <div class="card-content">
+          <h3 id="news-title">this is content</h3>
+          <h6 class="news-src" id="news-src">end gadget</h6>
+          <p class="news-desc" id="news-desc">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut optio
+            ad deserunt vero dignissimos nesciunt dolore deleniti reprehenderit
+            doloremque ab.
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
